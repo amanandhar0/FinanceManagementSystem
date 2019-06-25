@@ -45,7 +45,10 @@ public class DisplayEmployee extends javax.swing.JPanel {
             st=con.createStatement();
             ResultSet rs=st.executeQuery(sql);
             while(rs.next()){
-             dtm.addRow(new Object[]{rs.getInt("Eid"),rs.getString("FirstName"),rs.getString("MiddleName"),rs.getString("LastName"),rs.getString("Gender"),rs.getString("Address"),rs.getString("City"),rs.getString("Phone"),rs.getString("Email"),rs.getString("Level"),rs.getString("Field")});
+             dtm.addRow(new Object[]{rs.getInt("Eid"),rs.getString("FirstName"),
+                 rs.getString("MiddleName"),rs.getString("LastName"),rs.getString("Gender"),
+                 rs.getString("Address"),rs.getString("City"),rs.getString("Phone"),rs.getString("Email"),
+                 rs.getString("Level"),rs.getString("Field")});
             } System.out.println("Data Displayed");
             
         } catch (Exception e) {

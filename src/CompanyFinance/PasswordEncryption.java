@@ -21,11 +21,7 @@ public class PasswordEncryption {
         if(null==inputValue)return null;
         
         try{
-            
             MessageDigest digest=MessageDigest.getInstance("MD5");
-            
-            
-            
             digest.update(inputValuewithsalt.getBytes(),0,inputValuewithsalt.length());
             encryptedValue=new BigInteger(1,digest.digest()).toString(16);
         }catch(Exception e){
